@@ -1,19 +1,24 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import BrandLogo from '@/components/BrandLogo';
+import { useState } from "react";
+import BrandLogo from "@/components/BrandLogo";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 text-white">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-6 lg:px-10">
-        <a href="#">
-          <BrandLogo />
-        </a>
+    <header className="sticky top-0 z-50 border-b border-[#E5E1D9] bg-white">
+      <div className="mx-auto flex h-[82px] max-w-[1440px] items-center px-6 lg:px-10">
+        
+        {/* Logo */}
+        <div className="shrink-0">
+          <a href="#">
+            <BrandLogo />
+          </a>
+        </div>
 
-        <nav className="hidden items-center gap-10 text-sm md:flex">
+        {/* Desktop navigation */}
+        <nav className="mr-auto ml-auto hidden items-center gap-10 text-sm md:flex">
           <a href="#building" className="nav-link">
             הבניין
           </a>
@@ -31,27 +36,32 @@ export default function Header() {
           </a>
         </nav>
 
+        {/* Desktop button */}
         <a
           href="#apartments"
-          className="hidden border border-white/60 px-6 py-3 text-sm transition-all duration-300 hover:bg-white hover:text-black md:block"
+          className="hidden shrink-0 border border-[#151514] px-6 py-3 text-sm transition-colors duration-300 hover:bg-[#151514] hover:text-white md:block"
         >
           בדיקת זמינות
         </a>
 
+        {/* Mobile button */}
         <button
           type="button"
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="flex h-11 w-11 items-center justify-center border border-white/50 md:hidden"
-          aria-label="תפריט"
+          onClick={() => setMenuOpen((open) => !open)}
+          className="mr-auto flex h-10 w-10 items-center justify-center border border-[#151514] md:hidden"
+          aria-label="פתיחת תפריט"
           aria-expanded={menuOpen}
         >
-          {menuOpen ? '×' : '☰'}
+          <span className="text-xl leading-none">
+            {menuOpen ? "×" : "☰"}
+          </span>
         </button>
       </div>
 
+      {/* Mobile menu */}
       {menuOpen && (
-        <div className="border-t border-white/20 bg-charcoal/95 px-6 py-7 backdrop-blur-md md:hidden">
-          <nav className="flex flex-col gap-6 text-sm">
+        <div className="border-t border-[#E5E1D9] bg-white px-6 py-6 md:hidden">
+          <nav className="flex flex-col gap-5 text-sm">
             <a href="#building" onClick={() => setMenuOpen(false)}>
               הבניין
             </a>
@@ -71,7 +81,7 @@ export default function Header() {
             <a
               href="#apartments"
               onClick={() => setMenuOpen(false)}
-              className="border border-gold px-5 py-3 text-center text-light-gold"
+              className="mt-2 border border-[#B89B5E] px-5 py-3 text-center"
             >
               בדיקת זמינות
             </a>

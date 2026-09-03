@@ -1,69 +1,53 @@
+import { site } from "@/data/site";
+
 export default function RentalOptions() {
   return (
-    <section className="section-dark px-6 py-24 md:py-36">
-      <div className="mx-auto max-w-[1400px]">
-        <div className="mb-14">
-          <p className="mb-5 text-xs tracking-[0.3em] gold">RENTAL OPTIONS</p>
-
-          <h2 className="font-serif text-4xl font-normal md:text-6xl">
-            אפשרויות השכרה
-          </h2>
-        </div>
-
-        <div className="grid gap-px bg-white/10 md:grid-cols-2">
-          <div id="short-term" className="bg-charcoal p-8 md:p-14">
-            <div className="mb-16 flex items-start justify-between">
-              <span className="text-sm gold">01</span>
-
-              <span className="text-xs tracking-[0.25em] text-white/30">
-                SHORT TERM
-              </span>
-            </div>
-
-            <h3 className="mb-5 font-serif text-3xl font-normal md:text-5xl">
-              השכרה לטווח קצר
-            </h3>
-
-            <p className="mb-10 max-w-md text-base leading-8 text-white/60">
-              למידע על אפשרויות ההשכרה לטווח קצר וזמינות, ניתן לעבור לעמוד
-              המתאים.
+    <section className="bg-[#151514] px-6 py-24 text-white md:py-32">
+      <div className="mx-auto max-w-[1440px]">
+        
+        <div className="grid gap-14 lg:grid-cols-2 lg:items-end">
+          
+          <div>
+            <p className="text-xs tracking-[0.3em] text-[#D6C39A]">
+              SHORT TERM RENTAL
             </p>
 
-            <a
-              href="#"
-              className="inline-flex items-center gap-4 border border-gold px-7 py-4 text-sm text-light-gold transition-colors hover:bg-gold hover:text-white"
-            >
-              לצפייה בדירות
-              <span>←</span>
-            </a>
+            <h2 className="mt-6 font-serif text-5xl font-normal leading-tight md:text-7xl">
+              להתארח
+              <br />
+              בלב ירושלים
+            </h2>
           </div>
 
-          <div id="long-term" className="bg-soft-black p-8 md:p-14">
-            <div className="mb-16 flex items-start justify-between">
-              <span className="text-sm gold">02</span>
-
-              <span className="text-xs tracking-[0.25em] text-white/30">
-                LONG TERM
-              </span>
-            </div>
-
-            <h3 className="mb-5 font-serif text-3xl font-normal md:text-5xl">
-              השכרה לטווח ארוך
-            </h3>
-
-            <p className="mb-10 max-w-md text-base leading-8 text-white/60">
-              לקבלת מידע על דירות זמינות ולתיאום השכרה, יש לפנות למתווך.
+          <div>
+            <p className="max-w-xl text-lg leading-9 text-white/65">
+              דירות בוטיק להשכרה לטווח קצר, במיקום מרכזי
+              ובבניין חדש.
             </p>
 
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-4 border border-white/50 px-7 py-4 text-sm transition-colors hover:bg-white hover:text-black"
-            >
-              צור קשר עם המתווך
-              <span>←</span>
-            </a>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <a
+                href={site.airbnbUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#B89B5E] px-8 py-4 text-center text-sm transition-colors hover:bg-[#D6C39A]"
+              >
+                לצפייה וזמינות
+              </a>
+
+              <a
+                href={site.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-white/40 px-8 py-4 text-center text-sm transition-colors hover:bg-white hover:text-black"
+              >
+                WhatsApp
+              </a>
+            </div>
           </div>
+
         </div>
+
       </div>
     </section>
   );

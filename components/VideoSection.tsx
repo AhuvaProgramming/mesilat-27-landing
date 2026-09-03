@@ -1,40 +1,40 @@
 export default function VideoSection() {
   return (
-    <section className="section-cream px-6 py-24 md:py-36">
-      <div className="mx-auto max-w-[1400px]">
-        <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+    <section className="bg-white px-6 py-24 md:py-36">
+      <div className="mx-auto max-w-[1440px]">
+        
+        <div className="mb-12 grid gap-8 md:grid-cols-2">
           <div>
-            <p className="mb-5 text-xs tracking-[0.3em] gold">
-              A GLIMPSE INSIDE
+            <p className="text-xs tracking-[0.3em] text-[#B89B5E]">
+              INSIDE
             </p>
 
-            <h2 className="font-serif text-4xl font-normal md:text-6xl">
+            <h2 className="mt-5 font-serif text-5xl font-normal md:text-7xl">
               הצצה לדירה
             </h2>
           </div>
 
-          <p className="max-w-md text-base leading-8 muted">
-            הצצה לאחד מסוגי הדירות בפרויקט ולשפה העיצובית של מסילת ישרים 27.
+          <p className="max-w-md self-end text-lg leading-8 text-[#716D66]">
+            הצצה לאחד מסוגי הדירות בפרויקט.
           </p>
         </div>
 
-        <div className="group relative aspect-video overflow-hidden bg-soft-black">
-          <div className="absolute inset-0 bg-[linear-gradient(135deg,#47443f,#8b8478,#272623)]" />
-
-          <div className="absolute inset-0 bg-black/20 transition-colors duration-500 group-hover:bg-black/30" />
+        <div className="relative aspect-video overflow-hidden bg-[#D9D5CD]">
+          <div className="absolute inset-0 bg-[linear-gradient(120deg,#D9D5CD,#BDB6AA)]" />
 
           <button
             type="button"
-            className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-white/10 text-2xl text-white backdrop-blur-sm transition-transform duration-300 group-hover:scale-110"
             aria-label="הפעלת הסרטון"
+            className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-xl shadow-lg transition-transform duration-300 hover:scale-110"
           >
             ▶
           </button>
 
-          <div className="absolute bottom-6 right-6 text-xs tracking-[0.25em] text-white/50">
-            MESILAT YESHARIM 27
+          <div className="absolute bottom-6 right-6 text-xs tracking-[0.2em] text-[#716D66]">
+            VIDEO
           </div>
         </div>
+
       </div>
     </section>
   );

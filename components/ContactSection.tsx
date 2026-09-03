@@ -1,32 +1,47 @@
+import { site } from "@/data/site";
+
 export default function ContactSection() {
   return (
-    <section id="contact" className="section-dark px-6 py-28 md:py-40">
+    <section
+      id="contact"
+      className="bg-[#F5F3EE] px-6 py-28 md:py-40"
+    >
       <div className="mx-auto max-w-[1100px] text-center">
-        <p className="mb-5 text-xs tracking-[0.3em] gold">GET IN TOUCH</p>
+        
+        <p className="text-xs tracking-[0.3em] text-[#B89B5E]">
+          CONTACT
+        </p>
 
-        <h2 className="font-serif text-5xl font-normal leading-tight md:text-7xl">
+        <h2 className="mt-6 font-serif text-5xl font-normal md:text-8xl">
           מעוניינים בדירה?
         </h2>
 
-        <p className="mx-auto mt-7 max-w-2xl text-lg leading-9 text-white/60">
-          לקבלת מידע נוסף על הדירות במסילת ישרים 27, בחרו באפשרות המתאימה לכם.
+        <p className="mx-auto mt-8 max-w-xl text-lg leading-9 text-[#716D66]">
+          לפרטים נוספים, זמינות והזמנה — צרו איתנו קשר.
         </p>
 
-        <div className="mt-12 flex flex-col justify-center gap-4 sm:flex-row">
+        <div className="mt-12 flex flex-col justify-center gap-3 sm:flex-row">
           <a
-            href="#short-term"
-            className="bg-gold px-8 py-4 text-sm transition-colors hover:bg-light-gold"
+            href={site.phoneHref}
+            className="bg-[#151514] px-9 py-4 text-sm text-white transition-colors hover:bg-[#B89B5E]"
           >
-            השכרה לטווח קצר
+            התקשרו אלינו
           </a>
 
           <a
-            href="#long-term"
-            className="border border-white/40 px-8 py-4 text-sm transition-colors hover:bg-white hover:text-black"
+            href={site.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-[#151514] px-9 py-4 text-sm transition-colors hover:bg-[#151514] hover:text-white"
           >
-            השכרה לטווח ארוך
+            WhatsApp
           </a>
         </div>
+
+        <p className="mt-6 text-sm text-[#716D66]">
+          {site.phoneDisplay}
+        </p>
+
       </div>
     </section>
   );

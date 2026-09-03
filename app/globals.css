@@ -3,14 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --cream: #f4f1ea;
-  --warm-white: #fbfaf7;
-  --charcoal: #171716;
-  --soft-black: #22211f;
-  --stone: #d8d1c5;
+  --background: #f5f3ee;
+  --white: #ffffff;
+  --black: #151514;
+  --gray: #716d66;
+  --light-gray: #d9d5cd;
   --gold: #b89b5e;
-  --light-gold: #d6c39a;
-  --muted: #746f67;
+  --gold-light: #d6c39a;
 }
 
 * {
@@ -21,17 +20,18 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
 body {
   margin: 0;
-  direction: rtl;
-  background: var(--cream);
-  color: var(--charcoal);
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  min-height: 100%;
 }
 
-button,
-a {
-  font: inherit;
+body {
+  background: var(--white);
+  color: var(--black);
+  direction: rtl;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -39,65 +39,60 @@ a {
   text-decoration: none;
 }
 
+button {
+  font: inherit;
+}
+
 ::selection {
   background: var(--gold);
   color: white;
 }
 
+/* Navigation */
+
 .nav-link {
   position: relative;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   bottom: -8px;
   width: 0;
   height: 1px;
   background: var(--gold);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover {
-  opacity: 0.8;
+  transition: width 0.25s ease;
 }
 
 .nav-link:hover::after {
   width: 100%;
 }
 
-.section-cream {
-  background: var(--cream);
+/* Main sections */
+
+.section-light {
+  background: var(--white);
 }
 
-.section-white {
-  background: var(--warm-white);
+.section-cream {
+  background: var(--background);
 }
 
 .section-dark {
-  background: var(--charcoal);
+  background: var(--black);
   color: white;
 }
 
-.section-soft-dark {
-  background: var(--soft-black);
-  color: white;
-}
+/* Mobile spacing for floating contact buttons */
 
-.gold {
-  color: var(--gold);
-}
-
-.muted {
-  color: var(--muted);
-}
-
-.border-stone {
-  border-color: var(--stone);
-}
-
-.border-gold {
-  border-color: var(--gold);
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 70px;
+  }
 }

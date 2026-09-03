@@ -1,9 +1,9 @@
-import './globals.css';
-import type { Metadata } from 'next';
+import "./globals.css";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'מסילת ישרים 27',
-  description: 'דירות חדשות להשכרה בלב ירושלים',
+  title: "מסילת ישרים 27",
+  description: "16 דירות להשכרה לטווח קצר בלב ירושלים",
 };
 
 export default function RootLayout({
